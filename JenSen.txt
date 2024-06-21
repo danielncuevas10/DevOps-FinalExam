@@ -1,7 +1,7 @@
 pipeline{
     agent { label 'aws' }
     environment{
-        TOKENAWS = credentials('controller-ssh-key')
+        TOKENAWS = credentials('e66a5c94-3449-45a5-bcd3-f36db5b5b1f9')
     }
     stages{ 
         stage('Deploy to Testing'){
