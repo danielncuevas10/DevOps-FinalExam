@@ -13,7 +13,7 @@ pipeline{
          
 
             
-        }
+        
         stage('Deploy to Staging'){
             steps{
             sh 'ssh -T -oStrictHostKeyChecking=no -i "$TOKENAWS" ec2-user@54.82.51.243 " sudo dnf update; sudo dnf install git -y; sudo dnf install -y httpd; sudo systemctl start httpd; sudo rm -Rf /var/www/html/; sudo git clone https://github.com/danielncuevas10/DevOps-FinalExam /var/www/html"'
@@ -31,4 +31,6 @@ pipeline{
         }
      
     }
+
+}
 
